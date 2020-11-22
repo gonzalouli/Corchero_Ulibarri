@@ -23,7 +23,7 @@ import evolsoft.concesionario.service.VendedorService;
 @Service
 public class CocheServiceImpl implements CocheService {
 
-public List<CocheDTO> findCochesInPriceRange(Integer minPrice, Integer maxPrice);y en la clase CocheServiceImpl, la implementación del mismo:@Overridepublic List<CocheDTO> findCochesInPriceRange(Integer minPrice, Integer maxPrice){List<Coche> coches = cocheDAO.findCarsBtwPriceRange(minPrice, maxPrice);final List<CocheDTO> cochesInRange = new ArrayList<>();coches.forEach(coche -> {final CocheDTO cocheDTO = map(coche);cochesInRange.add(cocheDTO);});return cochesInRange;}
+	@Overridepublic List<CocheDTO> findCochesInPriceRange(Integer minPrice, Integer maxPrice){List<Coche> coches = cocheDAO.findCarsBtwPriceRange(minPrice, maxPrice);final List<CocheDTO> cochesInRange = new ArrayList<>();coches.forEach(coche -> {final CocheDTO cocheDTO = map(coche);cochesInRange.add(cocheDTO);});return cochesInRange;}
 
 	@Autowired
 	private CocheDAO cocheDAO;
