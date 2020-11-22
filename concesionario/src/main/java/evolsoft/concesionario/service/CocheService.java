@@ -7,6 +7,7 @@ import evolsoft.concesionario.exception.NotFoundExcept;
 import evolsoft.concesionario.model.Coche;
 
 public interface CocheService {
+	public List<CocheDTO> findCochesInStock();
 
 	public List<CocheDTO> findCochesInPriceRange(Integer minPrice, Integer maxPrice);
 	CocheDTO findById(Integer id) throws NotFoundExcept;
