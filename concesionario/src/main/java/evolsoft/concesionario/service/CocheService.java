@@ -8,6 +8,7 @@ import evolsoft.concesionario.model.Coche;
 
 public interface CocheService {
 
+	public List<CocheDTO> findCochesInPriceRange(Integer minPrice, Integer maxPrice);
 	CocheDTO findById(Integer id) throws NotFoundExcept;
 
 	List<CocheDTO> findAll(Integer page, Integer size);
