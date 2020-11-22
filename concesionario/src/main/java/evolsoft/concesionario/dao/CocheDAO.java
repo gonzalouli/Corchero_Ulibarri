@@ -10,6 +10,8 @@ import evolsoft.concesionario.model.Coche;
 
 public interface CocheDAO extends PagingAndSortingRepository<Coche, Integer> {
 
+@Query(value = "select c from Coche c where c.precio between :minPrice and :maxPrice")public List<Coche> findCarsBtwPriceRange(@Param("minPrice") double minPrice, @Param("maxPrice") double maxPrice);
+
 	public Coche findByNumBastidor(@Param(value = "numBastidor") Integer numBastidor);
 
 	public Coche findByMatricula(@Param(value = "matricula") String matricula);
